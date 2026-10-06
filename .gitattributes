@@ -1,3 +1,6 @@
 *.sh text eol=lf
 *.md text
+mvnw text eol=lf
+*.cmd text eol=crlf
+*.bat text eol=crlf
 LICENSE text eol=lf
