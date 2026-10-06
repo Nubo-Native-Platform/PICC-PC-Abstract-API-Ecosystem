@@ -1,10 +1,9 @@
 # Maintainers
 
-The following people, from multiple organizations and as individual
-contributors, are the maintainers of the Nubo Native Platform (NNP).
+The following individuals, representing multiple organizations and contributing independently, are the maintainers of the Nubo Native Platform (NNP) and this API Ecosystem Abstraction module.
 
-| Maintainer | GitHub ID | Company / Organization |
-|------------|-----------|------------------------|
+| Maintainer | GitHub ID | Organization / Affiliation |
+| :--- | :--- | :--- |
 | Rabi Sankar Khatua | | BWS - India |
 | Arnab Chatterjee | | Individual - India |
 | Tanmoy Das | | Individual - India |
@@ -15,4 +14,4 @@ contributors, are the maintainers of the Nubo Native Platform (NNP).
 | Timothy | | BWS - South Africa |
 | Indrajit | | Starbucks - USA |
 
-To reach the maintainers about contributions, use **contribution@nubons.com**.
+To reach the project maintainers regarding proposals, governance, or contributions, please contact **contribution@nubons.com**.

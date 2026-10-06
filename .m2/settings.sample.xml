@@ -1,0 +1,65 @@
+<!-- 
+  NNP Ecosystem - Sample Maven settings.xml Template
+  Copy this file to ~/.m2/settings.xml and replace placeholders or export environment variables.
+-->
+<settings xmlns="http://maven.apache.org/SETTINGS/1.0.0"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0 https://maven.apache.org/xsd/settings-1.0.0.xsd">
+
+    <servers>
+        <!-- GitHub Packages Authentication (Export GITHUB_ACTOR and GITHUB_TOKEN or replace with actual credentials) -->
+        <server>
+            <id>github</id>
+            <username>${env.GITHUB_ACTOR}</username>
+            <password>${env.GITHUB_TOKEN}</password>
+        </server>
+        <!-- Optional: GitLab Maven Registry -->
+        <server>
+            <id>gitlab-maven</id>
+            <username>${env.CI_REGISTRY_USER}</username>
+            <password>${env.CI_JOB_TOKEN}</password>
+        </server>
+        <!-- Optional: Sonatype OSSRH / Maven Central -->
+        <server>
+            <id>ossrh</id>
+            <username>${env.OSSRH_USERNAME}</username>
+            <password>${env.OSSRH_PASSWORD}</password>
+        </server>
+    </servers>
+
+    <profiles>
+        <profile>
+            <id>nnp-repositories</id>
+            <repositories>
+                <!-- NNP Public GitHub Pages Maven Repository -->
+                <repository>
+                    <id>nnp-public-abstract-platform</id>
+                    <name>NNP Public Maven Repository - Abstract Platform</name>
+                    <url>https://nubo-native-platform.github.io/PICC-PC-Abstract-NNP-Platform/maven/</url>
+                    <releases>
+                        <enabled>true</enabled>
+                    </releases>
+                    <snapshots>
+                        <enabled>false</enabled>
+                    </snapshots>
+                </repository>
+                <!-- NNP Public GitHub Pages Maven Repository for Abstract API Ecosystem -->
+                <repository>
+                    <id>nnp-public-abstract-api-ecosystem</id>
+                    <name>NNP Public Maven Repository - Abstract API Ecosystem</name>
+                    <url>https://nubo-native-platform.github.io/PICC-PC-Abstract-API-Ecosystem/maven/</url>
+                    <releases>
+                        <enabled>true</enabled>
+                    </releases>
+                    <snapshots>
+                        <enabled>false</enabled>
+                    </snapshots>
+                </repository>
+            </repositories>
+        </profile>
+    </profiles>
+
+    <activeProfiles>
+        <activeProfile>nnp-repositories</activeProfile>
+    </activeProfiles>
+</settings>
